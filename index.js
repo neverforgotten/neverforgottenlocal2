@@ -12,11 +12,12 @@ if (!databaseUri) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
+  databaseURI: databaseUri || 'mongodb://neverforgottenlocal2:neverforgotten@123@ds137149.mlab.com:37149/neverforgottenwithcloudcode',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'myAppId',
-  masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
-  serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
+  appId: process.env.APP_ID || 'RCfFFZBhnJBk3jbZrAwNI09TSl0fVHsiyDMe57WV',
+  masterKey: process.env.MASTER_KEY || 'VsHhmNrdcAad4GhGTv9HcipxuoOnAVkS7EzTFJ5g', //Add your master key here. Keep it secret!
+  fileKey:process.env.FILE_KEY || '321e8f1c-2b1a-4fb5-aa5b-208a8a979876', // Add your file key here.
+  serverURL: process.env.SERVER_URL || 'https://neverforgottenlocal2.herokuapp.com/parse',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
